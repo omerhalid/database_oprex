@@ -55,3 +55,52 @@ V HashMap<K, V>::get(const K& key) const
 
     throw std::runtime_error("Key not found");
 }
+
+template<typename K, typename V>
+void HashMap<K, V>::remove(const K& key)
+{
+    size_t index = hash(key);
+    size_t original_index = index;
+
+    while(table[index].has_value())
+    {
+        if(!table[index]->is_deleted && table[index]->key == key)
+        {
+            table[index]->is_deleted = true;
+            --size;
+            return;
+        }
+        index = (index + 1) % capacity;
+        if(index == original_index)
+            break;
+    }
+}
+
+template<typename K, typename V>
+bool HashMap<K, V>::containes(const K& key) const
+{
+    size_t index = hash(key);
+    size_t original_index = index;
+
+     while(table[index].has_value())
+    {
+        if(!table[index]->is_deleted && table[index]->key == key)
+        {
+            return true;
+        }
+        index = (index + 1) % capacity;
+        if(index == original_index)
+            break;
+    }
+    return false;
+}
+
+template<typename K, typename V>
+void HashMap<K, V>::resize()
+{
+    capacity *= 2;
+
+    std::vector<std::optional<Entry>> new_table(capacity);
+
+    
+}

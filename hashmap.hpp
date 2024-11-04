@@ -11,7 +11,7 @@ class HashMap
 {
 public:
 
-    HashMap(size_t initial_capacity = 16, float load_factor = 0.75) {}
+    HashMap(size_t initial_capacity = 16, float load_factor = 0.75);
 
     void put(const K& key, const V& value);
     V get(const K& key) const;
@@ -27,6 +27,8 @@ private:
 
         Entry(K key_, V value_, ) : key(key_), value(value_), is_deleted(false) {}
     };
+
+    std::vector<std::optional<Entry>> table;
     
     size_t capacity;
     float load_factor;

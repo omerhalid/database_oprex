@@ -16,7 +16,7 @@ public:
     void put(const K& key, const V& value);
     V get(const K& key) const;
     void remove(const K& key);
-    bool containes(const K& key) const;
+    bool contains(const K& key) const;
 
 private:
     struct Entry

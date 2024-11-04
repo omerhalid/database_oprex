@@ -77,7 +77,7 @@ void HashMap<K, V>::remove(const K& key)
 }
 
 template<typename K, typename V>
-bool HashMap<K, V>::containes(const K& key) const
+bool HashMap<K, V>::contains(const K& key) const
 {
     size_t index = hash(key);
     size_t original_index = index;
@@ -102,5 +102,20 @@ void HashMap<K, V>::resize()
 
     std::vector<std::optional<Entry>> new_table(capacity);
 
+    for(const auto& entry : table)
+    {
+        if(entry.has_value() && !entry->is_deleted)
+        {
+            size_t index = hash(entry->key);
+
+            while(new_table[index].has_value())
+            {
+                index = (index + 1) % capacity;
+            }
+            new_table[index] = entry;
+        }
+    }
+    
+    table = std::move(new_table);
     
 }

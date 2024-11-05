@@ -21,8 +21,8 @@ A NoSQL key-value database implemented in C++. This project supports CRUD operat
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/omerhalid/key_value_database.git
-    cd key_value_database
+    git clone https://github.com/omerhalid/database_oprex.git
+    cd database_oprex
     ```
 
 2. Create a build directory and navigate to it:

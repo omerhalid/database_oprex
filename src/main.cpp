@@ -4,6 +4,7 @@
 #include "../include/disk_io.hpp"
 #include "../include/query_language.hpp"
 
+// is it even needed anymore?
 using json = nlohmann::json;
 
 std::vector<std::string> parse_query(const std::string& query) {

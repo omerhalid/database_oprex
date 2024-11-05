@@ -1,2 +1,5 @@
 # remove executable files
 *.exe
+
+#build files
+build/

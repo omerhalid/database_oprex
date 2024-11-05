@@ -16,6 +16,7 @@ A NoSQL key-value database implemented in C++. This project supports CRUD operat
 
 - C++17 or later
 - CMake (for building the project)
+- MinGW (for GCC on Windows)
 
 ### Building the Project
 
@@ -33,12 +34,12 @@ A NoSQL key-value database implemented in C++. This project supports CRUD operat
 
 3. Run CMake to configure the project:
     ```sh
-    cmake ..
+    cmake .. -G "MinGW Makefiles"
     ```
 
 4. Build the project:
     ```sh
-    make
+    mingw32-make
     ```
 
 ### Running the Project

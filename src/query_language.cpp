@@ -1,5 +1,6 @@
-#include "query_language.hpp"
+#include "../include/query_language.hpp"
 
+// for other types as well?
 void QueryLanguage::execute_query(HashMap<int, std::string>& hashmap, const std::vector<std::string>& tokens) {
     if (tokens.empty()) return;
 

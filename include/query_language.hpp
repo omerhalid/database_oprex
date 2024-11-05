@@ -1,7 +1,7 @@
 #pragma once
 
-#include "hashmap.hpp"
-#include "disk_io.hpp"
+#include "../include/hashmap.hpp"
+#include "../include/disk_io.hpp"
 #include <iostream>
 #include <vector>
 

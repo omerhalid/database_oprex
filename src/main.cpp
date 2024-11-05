@@ -1,8 +1,8 @@
 #include <iostream>
 #include "C:/Users/katka/source/market_data_handler/json/json.hpp"
-#include "hashmap.hpp"
-#include "disk_io.hpp"
-#include "query_language.hpp"
+#include "../include/hashmap.hpp"
+#include "../include/disk_io.hpp"
+#include "../include/query_language.hpp"
 
 using json = nlohmann::json;
 

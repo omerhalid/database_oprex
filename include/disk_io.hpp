@@ -1,7 +1,7 @@
 #ifndef DISK_IO_HPP
 #define DISK_IO_HPP
 
-#include "hashmap.hpp"
+#include "../include/hashmap.hpp"
 #include <fstream>
 
 class Disk_Input_Output

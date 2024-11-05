@@ -1,4 +1,4 @@
-#include "disk_io.hpp"
+#include "../include/disk_io.hpp"
 
 void Disk_Input_Output::save_to_disk(const HashMap<int, std::string>& hashmap, const std::string& filename) {
     std::ofstream file(filename, std::ios::binary);

@@ -21,7 +21,7 @@ A NoSQL key-value database implemented in C++. This project supports CRUD operat
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/key_value_database.git
+    git clone https://github.com/omerhalid/key_value_database.git
     cd key_value_database
     ```
 

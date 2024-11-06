@@ -18,6 +18,8 @@ std::vector<std::string> parse_query(const std::string& query) {
 }
 
 int main() {
+
+    // bring metaprogramming to let the user choose the types
     HashMap<int, std::string> hashmap(10, 0.75); // Provide initial capacity and load factor
 
     std::string query;
